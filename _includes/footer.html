@@ -1,0 +1,101 @@
+<footer>
+  <div class="footer-container">
+    <div class="footer-left">
+      <img src="{{ "../img/logo.png" | relative_url }}" alt="사이트 로고">
+    </div>
+
+    <div class="footer-center">
+      <p>(주)한원로지스틱<br><span>HANWON LOGISTIC CO.,LTD</span></p>
+      <br>
+      <p>사업자등록번호: 123-45-67890</p>
+      <p>대표이사: 박종진</p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 HANWON LOGISTIC CO., LTD. All rights reserved.</p>
+  </div>
+</footer>
+
+
+<style>
+  footer {
+    background: #222;
+    color: #fff;
+    padding: 30px 0;
+  }
+
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .footer-left,
+  .footer-center,
+  .footer-right {
+    width: 30%;
+    font-size: 14px;
+    text-align: left;
+  }
+
+  .footer-left img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .footer-container p {
+    margin: 5px 0;
+    color: #fff;
+    word-break: keep-all;
+  }
+
+  .footer-container a {
+    color: #bbb;
+    text-decoration: none;
+  }
+
+  .footer-container a:hover {
+    color: #fff;
+    text-decoration: underline;
+  }
+  .footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.footer-bottom p {
+  color: #ffffff;
+  font-size: 13px;
+  margin: 0;
+}
+
+
+  @media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-left,
+  .footer-center,
+  .footer-right {
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: center; /* 모바일에서 가운데 정렬 */
+  }
+
+  .footer-left img {
+    max-width: 200px;
+    margin: 0 auto;
+    display: block;
+  }
+}
+
+
+</style>

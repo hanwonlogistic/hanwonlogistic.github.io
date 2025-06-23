@@ -1,0 +1,74 @@
+---
+layout: page
+title: 공지사항
+permalink: /blog/
+---
+
+<!-- 상단 배너 -->
+<section id="global-header">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="block">
+          <h1>공지사항</h1>
+          <p>NOTICE</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 공지사항 리스트 -->
+<div class="post-area">
+<div class="container">
+  <!-- <h2>공지사항 목록</h2> -->
+  <table>
+    <thead>
+      <tr>
+        <th>번호</th>
+        <th>제목</th>
+        <th>작성일</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% assign posts = site.posts | where: "categories", "notice" %}
+      {% for post in posts %}
+      <tr>
+        <td>{{ forloop.index }}</td>
+        <td><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></td>
+        <td>{{ post.date | date: "%Y-%m-%d" }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+</div>
+<style>
+  /* 공지사항 목록 테이블 스타일 */
+  table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      padding-bottom: 10px;
+  }
+
+  th, td {
+      border: 1px solid #ddd;
+      padding: 10px;
+      text-align: center;
+  }
+
+  th {
+      background: #c8c8c8;
+      color: rgb(49, 49, 49);
+  }
+
+  td a {
+      color: #007BFF;
+      text-decoration: none;
+  }
+
+  td a:hover {
+      text-decoration: underline;
+  }
+</style>

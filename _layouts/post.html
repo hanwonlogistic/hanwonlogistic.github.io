@@ -1,0 +1,63 @@
+---
+layout: default
+---
+
+<!-- <div class="contents-container">
+    <h2>{{ page.title }}</h2>
+    <p class="post-date">{{ page.date | date: "%Y-%m-%d" }}</p>
+    <div class="post-content">
+        {{ content }}
+    </div>
+    <a href="{{ site.baseurl }}/blog/" class="back-btn">← 목록으로 돌아가기</a>
+</div> -->
+<section id="global-header">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="block">
+          <h1>공지사항</h1>
+          <p>NOTICE</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="intro" style="border: 1px dotted #ddd;">
+  <div class="container">
+    <div class="row">
+      <div>
+        <div class="block">
+          <h1>{{ page.title }}</h1>
+          <div class="post-info-wrapper">
+            <!-- <p class="italic"><span class="bold">{{ page.date | date: "%B %-d, %Y" }}</span></p> -->
+            <p class="italic"><span class="bold">{{ page.date | date: "%Y년 %m월 %d일" }}</span></p>
+          </div>
+          <hr />
+          <p>{{ content }}</p>
+        </div>
+      </div><!-- .col-md-7 close -->
+    </div>
+  </div>
+</section>
+</div>
+<p class="center-text" style="padding: 30px;">
+<a href="{{ site.baseurl }}/blog">뒤로가기</a>
+</p>
+
+
+<style>
+  @media (max-width: 768px) {
+  #intro .block {
+    padding: 30px 20px;
+  }
+
+  #intro .block h1{
+    font-size: 5vw
+  }
+
+  #intro .block p {
+    font-size: 15px;
+  }
+}
+</style>
